@@ -1,0 +1,49 @@
+.question {
+  font-family: "Open Sans";
+  margin: 25px auto;
+  max-width: 77vw;
+  background-color: #20695f;
+  border: 1px solid #04795b;
+  box-shadow: 0 0 10px black;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    border-radius: 0 50%;
+  }
+
+  .question-content {
+    font-size: 28px;
+    flex-basis: 73%;
+    line-height: 45px;
+
+    *:focus {
+      outline: none;
+    }
+
+    .rhap_container {
+      background-color: #064e3c;
+      border-radius: 30px;
+
+      .rhap_additional-controls {
+        display: none;
+      }
+
+      .rhap_volume-controls {
+        justify-content: flex-start;
+      }
+
+      div {
+        color: #ffffff;
+      }
+    }
+
+    span {
+      display: block;
+      padding-bottom: 15px;
+      font-weight: 500;
+    }
+  }
+}
