@@ -51,7 +51,7 @@ const birdsData = [
     },
   ],
   [
-    // воробьиные
+    // воробьинообразные
     {
       id: 1,
       name: 'Рыжеухий бюльбюль',
@@ -66,7 +66,7 @@ const birdsData = [
       species: 'Lanius collurio',
       description: 'Жулан относится к плотоядным птицам, может охотиться на мышей. При охоте на жертву, он предпочитает сидеть в засаде. Жулан способен пародировать голоса других птиц.',
       image: 'https://live.staticflickr.com//65535//50156285426_e3d06555e9.jpg',
-      audio: 'https://www.xeno-canto.org/api/2/recordings?query=Lanius%20collurio',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/QAJPWEPSTL/XC576296-neunt%C3%B60842.mp3',
     },
     {
       id: 3,

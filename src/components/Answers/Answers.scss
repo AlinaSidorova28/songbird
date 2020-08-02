@@ -13,6 +13,7 @@
   
     li {
       padding: 15px;
+      line-height: 25px;
       border-bottom: 1px solid #064e3c;
       cursor: pointer;
 
@@ -32,6 +33,14 @@
         margin-right: 15px;
         border-radius: 50%;
         transition: .1s;
+      }
+
+      .correct {
+        background-color: #08b95c;
+      }
+
+      .wrong {
+        background-color: #d62c1a;
       }
 
       &:hover {

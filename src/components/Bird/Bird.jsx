@@ -1,13 +1,61 @@
 import React from 'react';
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
+import 'react-h5-audio-player/src/styles.scss';
 import './Bird.scss';
+
+import birdsData from '../../utils/birds';
 
 class Bird extends React.PureComponent {
   render() {
+    const { currentLevel, currentBird } = this.props;
+    let content;
+    const bird = birdsData[currentLevel][currentBird];
+    if (currentBird) {
+      content = (
+        <>
+          <div className="bird-container">
+            <img src={bird.image} alt={bird.name} />
+            <span>
+              <h2>{bird.name}</h2>
+              <p>{bird.species}</p>
+              <AudioPlayer
+                src={bird.audio}
+                showJumpControls={false}
+                autoPlayAfterSrcChange={false}
+                defaultDuration="00:00"
+                customAdditionalControls={[]}
+                customProgressBarSection={
+                  [
+                    RHAP_UI.MAIN_CONTROLS,
+                    RHAP_UI.CURRENT_TIME,
+                    RHAP_UI.PROGRESS_BAR,
+                    RHAP_UI.DURATION,
+                  ]
+                }
+                customControlsSection={
+                  [
+                    RHAP_UI.VOLUME_CONTROLS,
+                  ]
+                }
+                layout="stacked-reverse"
+              />
+            </span>
+          </div>
+          <p>{bird.description}</p>
+        </>
+      );
+    } else {
+      content = (
+        <>
+          Послушайте плеер.
+          <br />
+          Выберите птицу из списка
+        </>
+      );
+    }
     return (
       <div className="bird">
-        Послушайте плеер.
-        <br />
-        Выберите птицу из списка
+        {content}
       </div>
     );
   }
