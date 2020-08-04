@@ -1,5 +1,5 @@
 import React from 'react';
-import AudioPlayer from 'react-h5-audio-player';
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/src/styles.scss';
 import './Question.scss';
 
@@ -16,14 +16,27 @@ class Question extends React.PureComponent {
       <div className="question">
         <img src={next ? birdsData[currentLevel][answers[currentLevel]].image : birdImage} alt="default bird" />
         <div className="question-content">
-          <span>******</span>
+          <span>{next ? birdsData[currentLevel][answers[currentLevel]].name : '******'}</span>
           <AudioPlayer
             src={birdsData[currentLevel][answers[currentLevel]].audio}
             showJumpControls={false}
             autoPlayAfterSrcChange={false}
-            defaultDuration="00:00"
+            defaultCurrentTime="Loading..."
+            defaultDuration="Loading..."
             customAdditionalControls={[]}
-            layout="horizontal-reverse"
+            customProgressBarSection={
+              [
+                RHAP_UI.PROGRESS_BAR,
+              ]
+            }
+            customControlsSection={
+              [
+                RHAP_UI.CURRENT_TIME,
+                RHAP_UI.MAIN_CONTROLS,
+                RHAP_UI.VOLUME_CONTROLS,
+                RHAP_UI.DURATION,
+              ]
+            }
           />
         </div>
       </div>

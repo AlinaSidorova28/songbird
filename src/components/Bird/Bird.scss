@@ -7,12 +7,31 @@
   margin-left: 15px;
   border-radius: 10px;
 
+  @media (min-width: 768px) and (max-width: 992px) {
+    flex-basis: 50%;
+  }
+
+  @media (max-width: 767px) {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
   .bird-container {
     display: flex;
     margin-bottom: 15px;
 
+    @media (min-width: 768px) and (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 570px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     span {
-      flex-basis: 50%;
+      flex-basis: 63%;
 
       h2 {
         border-bottom: 1px solid #f1f5f3;
@@ -25,6 +44,7 @@
 
     img {
       width: 200px;
+      height: 155px;
       border-radius: 10px;
       margin-right: 15px;
       border: 1.5px solid #064e3c;
@@ -40,17 +60,22 @@
       padding: 5px 15px;
       margin-top: 5px;
 
+      .rhap_controls-section {
+        display: grid;
+        grid-template-columns: 35px 1fr 1fr 35px;
+      }
+
       .rhap_additional-controls {
         display: none;
       }
 
-      .rhap_controls-section {
-        margin: 0;
-        width: 100%;
-    }
+      .rhap_main-controls {
+        justify-self: end;
+      }
 
       .rhap_volume-controls {
-        flex: none;
+        justify-self: start;
+        margin-right: 10px;
       }
 
       .rhap_play-pause-button {

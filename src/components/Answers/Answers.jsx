@@ -61,7 +61,7 @@ class Answers extends React.PureComponent {
               role="button"
               key={el.name}
               data-bird-number={i}
-              onClick={(event) => this.choiseHandler(i, event)} // ------------ черновик ----------------
+              onClick={(event) => this.choiseHandler(i, event)}
             >
               <span className="li-button" />
               {el.name}

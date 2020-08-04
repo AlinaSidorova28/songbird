@@ -8,12 +8,12 @@
       align-items: center;
 
       .logo {
-        width: 200px;
+        width: 185px;
         filter: drop-shadow(2px 4px 6px black);
       }
 
       span {
-        font-size: 20px;
+        font-size: 18px;
         text-shadow: 2px 4px 6px black;
       }
     }
@@ -28,12 +28,12 @@
       box-shadow: 0 0 10px black;
       outline: none;
       background-color: #064e3c;
-      line-height: 40px;
       margin: 25px 0;
 
       li {
         flex: auto;
         text-align: center;
+        padding: 10px;
 
         &:first-child {
           border-radius: 10px 0 0 10px;

@@ -26,18 +26,17 @@ class Bird extends React.PureComponent {
                 customAdditionalControls={[]}
                 customProgressBarSection={
                   [
-                    RHAP_UI.MAIN_CONTROLS,
-                    RHAP_UI.CURRENT_TIME,
                     RHAP_UI.PROGRESS_BAR,
-                    RHAP_UI.DURATION,
                   ]
                 }
                 customControlsSection={
                   [
+                    RHAP_UI.CURRENT_TIME,
+                    RHAP_UI.MAIN_CONTROLS,
                     RHAP_UI.VOLUME_CONTROLS,
+                    RHAP_UI.DURATION,
                   ]
                 }
-                layout="stacked-reverse"
               />
             </span>
           </div>

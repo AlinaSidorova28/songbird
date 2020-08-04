@@ -1,7 +1,8 @@
+// брейкать на 768, 1024
+
 .question {
   font-family: "Open Sans";
   margin: 25px auto;
-  max-width: 77vw;
   background-color: #20695f;
   border: 1px solid #04795b;
   box-shadow: 0 0 10px black;
@@ -10,15 +11,26 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   img {
     border-radius: 0 50%;
     width: 200px;
+    height: 155px;
+    margin-right: 15px;
     border: 1.5px solid #064e3c;
+
+    @media (max-width: 767px) {
+      align-self: center;
+    }
   }
 
   .question-content {
     font-size: 28px;
-    flex-basis: 73%;
+    flex-basis: 75%;
     line-height: 45px;
 
     *:focus {
@@ -27,24 +39,43 @@
 
     .rhap_container {
       background-color: #064e3c;
-      border-radius: 30px;
+      border-radius: 40px;
+
+      @media (max-width: 350px) {
+        padding: 10px;
+      }
+
+      .rhap_controls-section {
+        display: grid;
+        grid-template-columns: 35px 1fr 1fr 35px;
+      }
 
       .rhap_additional-controls {
         display: none;
       }
 
+      .rhap_main-controls {
+        justify-self: end;
+      }
+
       .rhap_volume-controls {
-        justify-content: flex-start;
+        justify-self: start;
+        margin-right: 10px;
+      }
+
+      .rhap_volume-bar {
+        width: 65px;
       }
 
       div {
         color: #ffffff;
+        font-size: 12px;
       }
     }
 
     span {
       display: block;
-      padding-bottom: 15px;
+      padding: 10px;
       font-weight: 500;
     }
   }

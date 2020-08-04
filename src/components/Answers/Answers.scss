@@ -5,6 +5,12 @@
   margin-right: 15px;
   border-radius: 10px;
 
+  @media (max-width: 767px) {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
   .birds-list {
     list-style: none;
     display: flex;
