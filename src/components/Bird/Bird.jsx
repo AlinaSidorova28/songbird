@@ -22,6 +22,7 @@ class Bird extends React.PureComponent {
                 src={bird.audio}
                 showJumpControls={false}
                 autoPlayAfterSrcChange={false}
+                defaultCurrentTime="00:00"
                 defaultDuration="00:00"
                 customAdditionalControls={[]}
                 customProgressBarSection={

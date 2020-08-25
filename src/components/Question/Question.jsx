@@ -21,8 +21,8 @@ class Question extends React.PureComponent {
             src={birdsData[currentLevel][answers[currentLevel]].audio}
             showJumpControls={false}
             autoPlayAfterSrcChange={false}
-            defaultCurrentTime="Loading..."
-            defaultDuration="Loading..."
+            defaultCurrentTime="00:00"
+            defaultDuration="00:00"
             customAdditionalControls={[]}
             customProgressBarSection={
               [
