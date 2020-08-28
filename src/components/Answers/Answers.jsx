@@ -1,10 +1,11 @@
-/* eslint-disable no-param-reassign */
 import React from 'react';
 import './Answers.scss';
 
 import birdsData from '../../utils/birds';
 import errorSound from './audio/error.mp3';
 import correctSound from './audio/correct.mp3';
+
+const className = require('classnames');
 
 class Answers extends React.PureComponent {
   constructor(props) {
@@ -26,15 +27,17 @@ class Answers extends React.PureComponent {
     } = this.props;
     const { levelScore } = this.state;
     const isCorrect = index === answers[currentLevel];
+    const point = event.target.children[0];
 
     if (!next) {
-      if (!isCorrect) {
+      if (!isCorrect && !point.className.includes('wrong')) {
         document.getElementById('error').play();
         this.setState((prevState) => ({
           levelScore: prevState.levelScore - 1,
         }));
       }
-      event.target.children[0].className += isCorrect ? ' correct' : ' wrong';
+      const liClasses = className('li-button', { correct: isCorrect }, { wrong: !isCorrect });
+      point.className = liClasses;
     }
     if (isCorrect) {
       if (!next) {

@@ -3,6 +3,7 @@ import './Final.scss';
 import setAnswers from '../../utils/setAnswers';
 
 import winAudio from './audio/win.mp3';
+import endingAudio from './audio/ending.mp3';
 import eagleImage from './img/eagle.jpg';
 
 class Final extends React.PureComponent {
@@ -37,6 +38,7 @@ class Final extends React.PureComponent {
     } else {
       content = (
         <>
+          <audio src={endingAudio} autoPlay />
           <p>{`Вы прошли викторину и набрали ${score} из 30 возможных баллов`}</p>
           <input
             className="again"
