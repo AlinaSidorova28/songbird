@@ -1,0 +1,48 @@
+.final {
+  width: 100%;
+  font-family: "Open Sans";
+  margin: 25px auto;
+  background-color: #20695f;
+  border: 1px solid #04795b;
+  box-shadow: 0 0 10px black;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+
+  h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+
+    @media (max-width: 424px) {
+      font-size: 32px;
+    }
+  }
+
+  p {
+    border-bottom: 1px solid #064e3c;
+    padding-bottom: 30px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .again {
+    font-family: "Open Sans";
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 10px;
+    border: 1px solid #04795b;
+    box-shadow: 0 0 10px black;
+    background-color: #04795b;
+    outline: none;
+    line-height: 40px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.3);
+    }
+  }
+}
